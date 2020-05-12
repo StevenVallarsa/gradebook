@@ -8,22 +8,19 @@ namespace GradeBook
 
         static void Main(string[] args)
         {
-            var numList = new List<double>() { 1.1, 2, 2, 3.3 };
 
-            double result = 0;
+            var book = new Book();
+            book.AddGrade(56.1);
+            book.AddGrade(99.0);
+            book.AddGrade(78.9);
+            book.AddGrade(36.1);
+            book.AddGrade(72.9);
 
-            foreach (var num in numList)
-            {
-                result += num;
-            }
+            book.ShowStats();
 
-            Console.WriteLine($"The result is {result / numList.Count:N1}");
         }
 
     }
 
-    public class Book
-    {
-
-    }
+    
 }
